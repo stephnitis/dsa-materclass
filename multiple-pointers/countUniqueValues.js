@@ -22,8 +22,30 @@ function countUniqueValues(arr) {
 const array1 = [1, 1, 2, 2, 3, 5, 7, 7, 7, 8]; // expected result 6
 const array2 = [1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]; // expected result 7
 const array3 = []; // expected result 0
-const array4 = [-2,-1,-1,0,1]; // expected result: 4
-console.log('my solution array1 ----->', countUniqueValues(array1))
-console.log('my solution array2 ----->', countUniqueValues(array2))
-console.log('my solution array3 ----->', countUniqueValues(array3))
-console.log('my solution array4 ----->', countUniqueValues(array4))
+const array4 = [-2,-1,-1,0, 1]; // expected result: 4
+// console.log('my solution array1 ----->', countUniqueValues(array1))
+// console.log('my solution array2 ----->', countUniqueValues(array2))
+// console.log('my solution array3 ----->', countUniqueValues(array3))
+// console.log('my solution array4 ----->', countUniqueValues(array4))
+
+// example solution
+
+function exampleCountUniqueValues(arr){
+  var i = 0;
+  if (arr.length === 0){
+    return i;
+  }
+  for(var j = 1; j < arr.length; j++){
+    if (arr[i] !== arr[j]){
+      i++;
+      arr[i] = arr[j]
+    }
+    // console.log(i, j)
+  }
+  return i + 1;
+}
+
+console.log('example solution array1', exampleCountUniqueValues(array1))
+console.log('example solution array2', exampleCountUniqueValues(array2))
+console.log('example solution array3', exampleCountUniqueValues(array3))
+console.log('example solution array4', exampleCountUniqueValues(array4))
