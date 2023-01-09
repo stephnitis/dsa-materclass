@@ -17,3 +17,28 @@ function sumZero(arr){
     }
   }
 }
+
+let array1 = [-4, -3, -2, -1, 0, 1, 2, 5];
+console.log('naive sum zero ---->', sumZero(array1));
+
+// refactor
+// time complexity: O(N)
+// space complexity: O(1)
+
+function betterSumZero(arr){
+  let left = 0;
+  let right = arr.length - 1;
+  while(left < right){
+    let sum = arr[left] + arr[right];
+    if(sum === 0){
+      return [arr[left], arr[right]];
+    } else if(sum > 0) {
+      right--;
+    } else {
+      left++;
+    }
+  }
+}
+
+let array2 = [-7, -4, -3, 1, 3, 8];
+console.log('sum zero refactor ---->', betterSumZero(array2));
