@@ -19,6 +19,11 @@ function countUniqueValues(arr) {
   return slow += 1;
 }
 
-const array1 = [1, 1, 2, 2, 3, 5, 7, 7, 7, 8];
-const array2 = [1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13];
-console.log('my solution ----->', countUniqueValues(array2))
+const array1 = [1, 1, 2, 2, 3, 5, 7, 7, 7, 8]; // expected result 6
+const array2 = [1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]; // expected result 7
+const array3 = []; // expected result 0
+const array4 = [-2,-1,-1,0,1]; // expected result: 4
+console.log('my solution array1 ----->', countUniqueValues(array1))
+console.log('my solution array2 ----->', countUniqueValues(array2))
+console.log('my solution array3 ----->', countUniqueValues(array3))
+console.log('my solution array4 ----->', countUniqueValues(array4))
